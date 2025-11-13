@@ -60,6 +60,10 @@ public class City
 
 		@Override
 		public String toString() {
-			return this.name + ", " + this.country + ", " + this.population + " d'habitants";
+			return this.name + ", " 
+					+ this.country ;
+					/*+ ", " 
+					+ this.population 
+					+ " d'habitants";*/
 		}
 }

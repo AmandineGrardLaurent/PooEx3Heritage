@@ -11,10 +11,11 @@ public class Test {
 		System.out.println(gates);
 		System.out.println(musk);
 		
-		
 		City limoges = new City("Limoges", "France", 133000);
 
 		SalesPerson dupont = new SalesPerson("Dupont", "Robert", 50, "rue des rosiers à Toulouse", limoges, "brico", 5);
 		System.out.println(dupont);
+		
+		
 	}
 }
