@@ -2,10 +2,14 @@ package fr.fms.entities;
 
 public class Test {
 	public static void main(String[] args) {
-		Capital paris = new Capital("Paris", "France",2000000, "Tour Eiffel");
-		Capital london = new Capital("Londres", "GB",9400000, "BigBen");
+		Capital washington = new Capital("Washington", "USA", 760000, "W-M");
+		City pretoria = new City("Pretoria", "Afrique du Sud", 800000);
 		
-		System.out.println(paris);
-		System.out.println(london);
+		Employee gates = new Employee("Gates", "Bill", 65, "USA", washington, "Fondation B&M", 1000000);
+		Employee musk = new Employee("Musk", "Elon", 49, "Palo Alto", pretoria, "Tesla", 150000);
+		
+		System.out.println(gates);
+		System.out.println(musk);
+
 	}
 }

@@ -4,11 +4,19 @@ class Capital extends City{
 	// Attributs
 	private String monument;
 	
+	// Constantes
+	private static final String MONUMENT = "";
 	
-	// Constructeur
+	
+	// Constructeurs
 	public Capital(String name, String country, int population, String monument){
 		super(name, country, population);
 		setMonument(monument);
+	}
+	
+	public Capital(String name, String country, int population){
+		super(name, country, population);
+		setMonument(MONUMENT);
 	}
 	
 	
@@ -23,6 +31,6 @@ class Capital extends City{
 	
 	@Override
 	public String toString() {
-		return super.toString() + " monument : " + this.monument;
+		return super.toString() + (this.monument == MONUMENT ? "" : ", monument: " + this.monument);
 	}
 }

@@ -9,10 +9,26 @@ public class City
 		private int population;
 		
 		
+		// Constantes
+		public static final int POPULATION = 0;
+		public static final String COUNTRY = "unknown";
+		
 		// Constructeur
 		public City(String name, String country, int population){
 			setName(name);
 			setCountry(country);
+			setPopulation(population);
+		}
+		
+		public City(String name, String country){
+			setName(name);
+			setCountry(country);
+			setPopulation(POPULATION);
+		}
+		
+		public City(String name, int population){
+			setName(name);
+			setCountry(COUNTRY);
 			setPopulation(population);
 		}
 		
