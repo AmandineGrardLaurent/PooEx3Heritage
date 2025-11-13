@@ -1,5 +1,6 @@
 package fr.fms.entities;
 
+
 public class Test {
 	public static void main(String[] args) {
 		Capital washington = new Capital("Washington", "USA", 760000, "W-M");
@@ -15,7 +16,5 @@ public class Test {
 
 		SalesPerson dupont = new SalesPerson("Dupont", "Robert", 50, "rue des rosiers à Toulouse", limoges, "brico", 5);
 		System.out.println(dupont);
-		
-		
 	}
 }

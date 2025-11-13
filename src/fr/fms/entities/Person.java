@@ -12,9 +12,9 @@ public abstract class Person {
 		
 		
 		// Constantes
-		public static final int YEARS = 0;
-		public static final String ADDRESS = "unknown";
-		public static final City HOMETOWN = new City ("unknown", "unknown", 0);
+		public static final int DEFAULT_YEARS = 0;
+		public static final String DEFAULT_ADDRESS = "unknown";
+		public static final City DEFAULT_HOMETOWN = new City ("unknown", "unknown", 0);
 		
 		
 		// Constructeurs
@@ -27,11 +27,11 @@ public abstract class Person {
 		}
 
 		public Person(String lastName, String firstName, int years){
-			this(lastName, firstName, years, ADDRESS, HOMETOWN);
+			this(lastName, firstName, years, DEFAULT_ADDRESS, DEFAULT_HOMETOWN);
 		}
 		
 		public Person(String lastName, String firstName){
-			this(lastName, firstName, YEARS, ADDRESS, HOMETOWN);
+			this(lastName, firstName, DEFAULT_YEARS, DEFAULT_ADDRESS, DEFAULT_HOMETOWN);
 		}
 
 		
@@ -74,36 +74,10 @@ public abstract class Person {
 		}
 		
 		
-		public String toString() {
-			return lastName + ", " 
-					+ firstName + ", " 
-					+ years + "ans, " 
-					+ "habitant " + address + ", " 
-					+ ((hometown == HOMETOWN) ? "" : 
-						"Ville de naissance: " + this.hometown);
-		}
-		
-		
-		public double remuneration() {
-			return 0;
-		}
-		
-		
-		// Méthodes
-		public static ArrayList<Person> addFrenchPersons(ArrayList<Person> persons) {
-			ArrayList<Person> frenchPersons = new ArrayList<>();
-
-			for (Person index : persons) {
-				if (index.getAdress().contains("Paris") || index.hometown.getCountry().equals("France")) {
-					frenchPersons.add(index);
-				}
-			}
-			return frenchPersons;
-		}
-		
+		// Méthodes	
 		public static void displayPersons(ArrayList<Person> persons) {
 			for (Person index : persons) {
-				System.out.println(index);
+				//System.out.println(index);
 				System.out.println(Person.displayRemuneration(index));
 			}
 		}
@@ -111,5 +85,18 @@ public abstract class Person {
 		public static String displayRemuneration(Person person) {
 			return "salaire de " + person.firstName + " " + person.lastName + " : " + person.remuneration();
 		}
-
+		
+		public String toString() {
+			return lastName + ", " 
+					+ firstName + ", " 
+					+ years + "ans, " 
+					+ "habitant " + address + ", " 
+					+ ((hometown == DEFAULT_HOMETOWN) ? "" : 
+						"Ville de naissance: " + this.hometown);
+		}
+		
+		public double remuneration() {
+			return 0;
+		}
+		
 }

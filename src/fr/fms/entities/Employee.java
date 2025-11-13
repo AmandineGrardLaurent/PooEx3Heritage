@@ -6,8 +6,8 @@ public class Employee extends Person{
 	private double salary;
 	
 	// Constantes
-	private static final int SALARY = 0;
-	private static final double PAYROLL_COST = 0.20;
+	private static final int DEFAULT_SALARY = 0;
+	private static final double DEFAULT_PAYROLL_COST = 0.20;
 	
 	// Constructeurs
 	public Employee(String lastName, String firstName, int years, String address, City hometown, String nameEntreprise, double salary){
@@ -19,7 +19,7 @@ public class Employee extends Person{
 	public Employee(String lastName, String firstName, int years, String address, City hometown, String nameEntreprise){
 		super(lastName, firstName, years, address, hometown);
 		setNameEntreprise(nameEntreprise);
-		setSalary(SALARY);
+		setSalary(DEFAULT_SALARY);
 	}
 			
 	
@@ -51,7 +51,7 @@ public class Employee extends Person{
 	
 	// Méthode
 	public double remuneration() {
-		return this.salary - (this.salary * PAYROLL_COST);
+		return this.salary - (this.salary * DEFAULT_PAYROLL_COST);
 	}
 	
 	

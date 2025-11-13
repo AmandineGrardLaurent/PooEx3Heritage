@@ -2,35 +2,35 @@ package fr.fms.entities;
 
 public class SalesPerson extends Person{
 	// Attributs
-	private String nameEntreprise;
+	private String nameCompany;
 	private double salary;
 	
 	
 	// Constantes
-	private static final int SALARY = 0;
-	private static final double TURNOVER = 50000;
+	private static final int DEFAULT_SALARY = 0;
+	private static final double DEFAULT_TURNOVER = 50000;
 	
 	
 	// Constructeurs
-	public SalesPerson(String lastName, String firstName, int years, String address, City hometown, String nameEntreprise, double salary){
+	public SalesPerson(String lastName, String firstName, int years, String address, City hometown, String nameCompany, double salary){
 		super(lastName, firstName, years, address, hometown);
-		setNameEntreprise(nameEntreprise);
+		setNameEntreprise(nameCompany);
 		setSalary(salary);
 	}
 			
-	public SalesPerson(String lastName, String firstName, int years, String address, City hometown, String nameEntreprise){
+	public SalesPerson(String lastName, String firstName, int years, String address, City hometown, String nameCompany){
 		super(lastName, firstName, years, address, hometown);
-		setNameEntreprise(nameEntreprise);
-		setSalary(SALARY);
+		setNameEntreprise(nameCompany);
+		setSalary(DEFAULT_SALARY);
 	}
 	
 	
 	// Accesseurs
 	public String getNameEntreprise() {
-		return nameEntreprise;
+		return nameCompany;
 	}
-	public void setNameEntreprise(String nameEntreprise) {
-		this.nameEntreprise = nameEntreprise;
+	public void setNameEntreprise(String nameCompany) {
+		this.nameCompany = nameCompany;
 	}
 	public double getSalary() {
 		return salary;
@@ -47,12 +47,12 @@ public class SalesPerson extends Person{
 	@Override
 	public String toString() {
 		return super.toString() +  ", Entreprise: " 
-				+ this.nameEntreprise + ", %CA: " 
+				+ this.nameCompany + ", %CA: " 
 				+ this.salary;
 	}
 	
 	// Méthode
 	public double remuneration() {
-		return this.salary * TURNOVER/100;
+		return this.salary * DEFAULT_TURNOVER/100;
 	}
 }

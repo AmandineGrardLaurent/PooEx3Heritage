@@ -9,8 +9,8 @@ public class City
 		
 		
 		// Constantes
-		public static final int POPULATION = 0;
-		public static final String COUNTRY = "unknown";
+		public static final int DEFAULT_POPULATION = 0;
+		public static final String DEFAULT_COUNTRY = "unknown";
 		
 		
 		// Constructeurs
@@ -23,12 +23,12 @@ public class City
 		public City(String name, String country){
 			setName(name);
 			setCountry(country);
-			setPopulation(POPULATION);
+			setPopulation(DEFAULT_POPULATION);
 		}
 		
 		public City(String name, int population){
 			setName(name);
-			setCountry(COUNTRY);
+			setCountry(DEFAULT_COUNTRY);
 			setPopulation(population);
 		}
 		

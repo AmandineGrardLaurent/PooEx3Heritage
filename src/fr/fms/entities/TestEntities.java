@@ -28,7 +28,7 @@ public class TestEntities {
 	Person [] person = {gates, musk, dupont};
 	
 	for (Person index : person) {
-		System.out.println(index);
+		//System.out.println(index);
 		System.out.println(Person.displayRemuneration(index));
 	}
 	
