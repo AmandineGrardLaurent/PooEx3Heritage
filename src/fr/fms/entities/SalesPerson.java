@@ -8,6 +8,7 @@ public class SalesPerson extends Person{
 	
 	// Constantes
 	private static final int SALARY = 0;
+	private static final double TURNOVER = 50000;
 	
 	
 	// Constructeurs
@@ -48,5 +49,10 @@ public class SalesPerson extends Person{
 		return super.toString() +  ", Entreprise: " 
 				+ this.nameEntreprise + ", %CA: " 
 				+ this.salary;
+	}
+	
+	// Méthode
+	public double remuneration() {
+		return this.salary * TURNOVER/100;
 	}
 }

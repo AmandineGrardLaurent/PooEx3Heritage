@@ -21,7 +21,7 @@ public class TestEntities {
 	persons.add(musk);
 	persons.add(dupont);
 	
-	Person.displayPersons(persons);
+	//Person.displayPersons(persons);
 	
 	
 	// Méthode avec un tableau
@@ -29,6 +29,7 @@ public class TestEntities {
 	
 	for (Person index : person) {
 		System.out.println(index);
+		System.out.println(Person.displayRemuneration(index));
 	}
 	
 	}

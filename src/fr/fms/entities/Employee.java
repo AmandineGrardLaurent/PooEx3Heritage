@@ -6,7 +6,8 @@ public class Employee extends Person{
 	private double salary;
 	
 	// Constantes
-		private static final int SALARY = 0;
+	private static final int SALARY = 0;
+	private static final double PAYROLL_COST = 0.20;
 	
 	// Constructeurs
 	public Employee(String lastName, String firstName, int years, String address, City hometown, String nameEntreprise, double salary){
@@ -47,5 +48,12 @@ public class Employee extends Person{
 				+ this.nameEntreprise + ", salaire: " 
 				+ this.salary;
 	}
+	
+	// Méthode
+	public double remuneration() {
+		return this.salary - (this.salary * PAYROLL_COST);
+	}
+	
+	
 
 }

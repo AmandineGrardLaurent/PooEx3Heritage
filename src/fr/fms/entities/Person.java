@@ -2,7 +2,7 @@ package fr.fms.entities;
 
 import java.util.ArrayList;
 
-public class Person {
+public abstract class Person {
 		// Attributs
 		private String lastName;
 		private String firstName;
@@ -73,7 +73,7 @@ public class Person {
 			this.address = address;
 		}
 		
-		@Override
+		
 		public String toString() {
 			return lastName + ", " 
 					+ firstName + ", " 
@@ -81,6 +81,11 @@ public class Person {
 					+ "habitant " + address + ", " 
 					+ ((hometown == HOMETOWN) ? "" : 
 						"Ville de naissance: " + this.hometown);
+		}
+		
+		
+		public double remuneration() {
+			return 0;
 		}
 		
 		
@@ -99,8 +104,12 @@ public class Person {
 		public static void displayPersons(ArrayList<Person> persons) {
 			for (Person index : persons) {
 				System.out.println(index);
+				System.out.println(Person.displayRemuneration(index));
 			}
 		}
 		
-	
+		public static String displayRemuneration(Person person) {
+			return "salaire de " + person.firstName + " " + person.lastName + " : " + person.remuneration();
+		}
+
 }
