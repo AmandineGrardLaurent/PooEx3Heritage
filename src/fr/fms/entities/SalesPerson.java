@@ -1,26 +1,28 @@
 package fr.fms.entities;
 
-public class Employee extends Person{
+public class SalesPerson extends Person{
 	// Attributs
 	private String nameEntreprise;
 	private double salary;
 	
+	
 	// Constantes
-		private static final int SALARY = 0;
+	private static final int SALARY = 0;
+	
 	
 	// Constructeurs
-	public Employee(String lastName, String firstName, int years, String address, City hometown, String nameEntreprise, double salary){
+	public SalesPerson(String lastName, String firstName, int years, String address, City hometown, String nameEntreprise, double salary){
 		super(lastName, firstName, years, address, hometown);
 		setNameEntreprise(nameEntreprise);
 		setSalary(salary);
 	}
-	
-	public Employee(String lastName, String firstName, int years, String address, City hometown, String nameEntreprise){
+			
+	public SalesPerson(String lastName, String firstName, int years, String address, City hometown, String nameEntreprise){
 		super(lastName, firstName, years, address, hometown);
 		setNameEntreprise(nameEntreprise);
 		setSalary(SALARY);
 	}
-			
+	
 	
 	// Accesseurs
 	public String getNameEntreprise() {
@@ -34,7 +36,7 @@ public class Employee extends Person{
 	}
 	public void setSalary(double salary) {
 		if (salary < 0) {
-			throw new RuntimeException("Salaire inférieur à 0 impossible.");
+			throw new RuntimeException("% du chiffre d'affaire inférieur à 0 impossible.");
 		}
 		else {
 			this.salary = salary;
@@ -44,8 +46,7 @@ public class Employee extends Person{
 	@Override
 	public String toString() {
 		return super.toString() +  ", Entreprise: " 
-				+ this.nameEntreprise + ", salaire: " 
+				+ this.nameEntreprise + ", %CA: " 
 				+ this.salary;
 	}
-
 }

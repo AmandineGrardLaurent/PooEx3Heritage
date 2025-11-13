@@ -4,6 +4,7 @@ class Capital extends City{
 	// Attributs
 	private String monument;
 	
+	
 	// Constantes
 	private static final String MONUMENT = "";
 	

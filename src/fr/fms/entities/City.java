@@ -2,7 +2,6 @@ package fr.fms.entities;
 
 public class City
 	{
-
 		// Attributs
 		private String name;
 		private String country;
@@ -13,7 +12,8 @@ public class City
 		public static final int POPULATION = 0;
 		public static final String COUNTRY = "unknown";
 		
-		// Constructeur
+		
+		// Constructeurs
 		public City(String name, String country, int population){
 			setName(name);
 			setCountry(country);

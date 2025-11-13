@@ -3,7 +3,7 @@ package fr.fms.entities;
 import java.util.ArrayList;
 
 public class Person {
-	// Attributs
+		// Attributs
 		private String lastName;
 		private String firstName;
 		private int years;
@@ -17,7 +17,7 @@ public class Person {
 		public static final City HOMETOWN = new City ("unknown", "unknown", 0);
 		
 		
-		// Constructeur
+		// Constructeurs
 		public Person(String lastName, String firstName, int years, String address, City hometown){
 			setLastName(lastName);
 			setFirstName(firstName);
@@ -82,6 +82,7 @@ public class Person {
 					+ ((hometown == HOMETOWN) ? "" : 
 						"Ville de naissance: " + this.hometown);
 		}
+		
 		
 		// Méthodes
 		public static ArrayList<Person> addFrenchPersons(ArrayList<Person> persons) {
